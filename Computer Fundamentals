@@ -1,0 +1,17 @@
+#include <iostream>
+  using namespace std;
+ int main(){
+   for(int a=1; a<=3; a++){
+  for( int b=1; b<=3; b++){
+    if( b > a){
+   cout<<" ";
+    }
+}
+      for( int z=1; z<=6+a; z++){
+    if(z-a < a){
+    cout<<"*";
+  }
+      }
+ cout<<endl;
+   }
+}
