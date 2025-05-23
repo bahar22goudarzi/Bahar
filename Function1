@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+// تابع اصلی با پارامتر ارجاع
+void incrementByRef(int &num) {
+    num++;
+}
+
+// تبدیل به تابع غیر void با پارامتر مقدار
+int incrementByValue(int num) {
+    return num + 1;
+}
+
+int main() {
+    int x = 5;
+    
+    // استفاده از تابع void با ارجاع
+    incrementByRef(x);
+    cout << "After incrementByRef: " << x << endl;
+    
+    // استفاده از تابع غیر void با مقدار
+    x = incrementByValue(x);
+    cout << "After incrementByValue: " << x << endl;
+    
+    return 0;
+}
