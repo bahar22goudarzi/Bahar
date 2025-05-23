@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void verifyCos2x() {
+    double x;
+    cout << "Enter x in radians: ";
+    cin >> x;
+    
+    double left = cos(2 * x);
+    double right = 2 * pow(cos(x), 2) - 1;
+    
+    cout << "cos(2x) = " << left << endl;
+    cout << "2cos²(x) - 1 = " << right << endl;
+    cout << "Difference: " << abs(left - right) << endl;
+}
+
+int main() {
+    verifyCos2x();
+    return 0;
+}
