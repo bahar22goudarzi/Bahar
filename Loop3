@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Program output: ";
+    for (int i = 0; i < 8; i++) {
+        if (i%2 == 0) cout << i + 1 << " ";
+        else if (i%3 == 0) cout << i*i << " ";
+        else if (i%5 == 0) cout << 2*i - 1 << " ";
+        else cout << i << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}
