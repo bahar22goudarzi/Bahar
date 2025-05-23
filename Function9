@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+float average(float x1, float x2 = 0, float x3 = 0, float x4 = 0) {
+    int count = 1 + (x2 != 0) + (x3 != 0) + (x4 != 0);
+    return (x1 + x2 + x3 + x4) / count;
+}
+
+int main() {
+    cout << "Average of 1 number (5): " << average(5) << endl;
+    cout << "Average of 2 numbers (5, 7): " << average(5, 7) << endl;
+    cout << "Average of 3 numbers (5, 7, 9): " << average(5, 7, 9) << endl;
+    cout << "Average of 4 numbers (5, 7, 9, 11): " << average(5, 7, 9, 11) << endl;
+    
+    return 0;
+}
