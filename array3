@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+void printArrayStats(int a[], int size) {
+    int sum = 0;
+    
+    cout << "Array elements:\n";
+    for (int i = 0; i < size; i++) {
+        cout << a[i] << " ";
+        sum += a[i];
+    }
+    
+    cout << "\nSum: " << sum << endl;
+    cout << "Average: " << static_cast<float>(sum) / size << endl;
+}
+
+int main() {
+    const int SIZE = 5;
+    int arr[SIZE] = {10, 20, 30, 40, 50};
+    
+    printArrayStats(arr, SIZE);
+    
+    return 0;
+}
