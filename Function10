@@ -1,0 +1,26 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+
+unsigned long long fact(int n) {
+    unsigned long long result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+void findOverflowPoint() {
+    int n = 1;
+    while (fact(n) <= ULLONG_MAX / (n + 1)) {
+        n++;
+    }
+    cout << "Factorial overflows at n = " << n << endl;
+    cout << "fact(" << n-1 << ") = " << fact(n-1) << endl;
+    cout << "fact(" << n << ") = " << fact(n) << " (overflow)" << endl;
+}
+
+int main() {
+    findOverflowPoint();
+    return 0;
+}
