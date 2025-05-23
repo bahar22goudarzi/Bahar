@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void verifyExponential() {
+    double b, n;
+    cout << "Enter base (b): ";
+    cin >> b;
+    cout << "Enter exponent (n): ";
+    cin >> n;
+    
+    double left = pow(b, n);
+    double right = exp(n * log(b));
+    
+    cout << "b^n = " << left << endl;
+    cout << "e^(n*log(b)) = " << right << endl;
+    cout << "Difference: " << abs(left - right) << endl;
+}
+
+int main() {
+    verifyExponential();
+    return 0;
+}
